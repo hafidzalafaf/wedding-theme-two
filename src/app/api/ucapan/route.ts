@@ -10,8 +10,8 @@ export async function GET() {
     const data = fs.readFileSync(filePath, 'utf-8');
     const ucapan = JSON.parse(data);
     return NextResponse.json(ucapan);
-  } catch (_error) {
-    return NextResponse.json({ error: 'Gagal membaca file ucapan.' }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
 
@@ -31,8 +31,8 @@ export async function POST(request: Request) {
 
     fs.writeFileSync(filePath, JSON.stringify(ucapan, null, 2));
     return NextResponse.json({ message: 'Ucapan berhasil disimpan.' });
-  } catch (_error) {
-    return NextResponse.json({ error: 'Gagal menyimpan ucapan.' }, { status: 500 });
+  } catch (error) {
+    return NextResponse.json({ error: error }, { status: 500 });
   }
 }
 

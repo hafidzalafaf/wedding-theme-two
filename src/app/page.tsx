@@ -1,6 +1,4 @@
 'use client'
-import BottomRightFlowers from '../components/bottom-right-flowers';
-import BottomLeftFlowers from '../components/bottom-left-fowers';
 import TopFlowers from '../components/top-flowers';
 import FlowersFallLeft from '../components/flowers-fall-left';
 import FlowerdFallRight from '../components/flowers-fall-right';
@@ -21,7 +19,7 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [name, setName] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [comments, setComments] = useState<any[]>([]);
+  const [comments, setComments] = useState<Array[]>([]);
   const [nameInvite, setNameInvite] = useState<string | null>(null);
 
   const playMusic = () => {
@@ -39,25 +37,6 @@ export default function Home() {
       }
       setIsPlaying(!isPlaying);
     }
-  };
-
-  var settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false
-  };
-  var settings2 = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false
   };
 
   useEffect(() => {
@@ -100,9 +79,7 @@ const fetchComments = async () => {
       },
       body: JSON.stringify({name, message }),
     });
-    console.log('name', name)
-    console.log('message', message)
-
+    console.log('name', response) 
     setName('');  
     setMessage('');
     fetchComments()
