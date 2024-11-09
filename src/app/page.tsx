@@ -19,7 +19,7 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [name, setName] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [comments, setComments] = useState<Array[]>([]);
+  const [comments, setComments] = useState<{id:string, name:string, message:string}[]>([]);
   const [nameInvite, setNameInvite] = useState<string | null>(null);
 
   const playMusic = () => {
@@ -625,7 +625,7 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                           <div key={comment.id} style={{ marginTop: '20px', borderBottom: '1px solid #ccc' }}>
                             <strong className='text-slate-900'>{comment.name}</strong>
                             <p className='text-slate-800'>{comment.message}</p>
-                            <small className='text-slate-800'>{new Date(comment.createdAt).toLocaleString()}</small>
+                            <small className='text-slate-800'>{new Date(comment.id).toLocaleString()}</small>
                           </div>
                         ))}
                       </div>
