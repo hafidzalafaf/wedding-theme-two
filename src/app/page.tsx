@@ -124,8 +124,7 @@ useEffect(() => {
     // Menambahkan event ke kalender
     const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
     
-    typeof window !== 'undefined'
-    ? window.open(calendarUrl, '_blank') : null
+    window.open(calendarUrl, '_blank')
   };
 
   const formatDateForCalendar = (date: Date) => {
