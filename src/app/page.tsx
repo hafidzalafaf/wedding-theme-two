@@ -96,7 +96,8 @@ useEffect(() => {
 
   useEffect(() => {
     // Ambil parameter dari URL
-    const queryName = new URLSearchParams(window.location.search).get('to');
+    const queryName =  typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('to') : null
     if (queryName) {
       setNameInvite(queryName);
     } else {
@@ -123,7 +124,8 @@ useEffect(() => {
     // Menambahkan event ke kalender
     const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
     
-    window.open(calendarUrl, '_blank');
+    typeof window !== 'undefined'
+    ? window.open(calendarUrl, '_blank') : null
   };
 
   const formatDateForCalendar = (date: Date) => {

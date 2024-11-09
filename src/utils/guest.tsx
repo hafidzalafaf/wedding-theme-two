@@ -2,7 +2,9 @@ import   { useEffect } from 'react';
 
 const Guest = () => {
   useEffect(() => {
-    const name = new URLSearchParams(window.location.search).get('to');
+    const name = typeof window !== 'undefined'
+    ? new URLSearchParams(window.location.search).get('to')
+    : null
     const guest = document.getElementById('guest-name');
 
     if (!guest) return;
