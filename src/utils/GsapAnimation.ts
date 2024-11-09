@@ -43,7 +43,7 @@ export const grassVariants:Variants  =  {
   export  const cambodiaVariants2: Variants = {
     initial: {
       y: -100,           
-      x: window.innerWidth, 
+      x: typeof window !== 'undefined' ? window.innerWidth: 0, 
       opacity: 0,
     },
     animate: ( ) => ({
