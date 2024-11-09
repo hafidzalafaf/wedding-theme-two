@@ -33,14 +33,14 @@ export default function Countdown({date}: Countdown) {
 
 	const timerComponents: JSX.Element[] = [];
 
-	Object.keys(timeLeft).forEach((interval) => {
+	Object.keys(timeLeft).forEach((interval,index) => {
 		if (!timeLeft[interval]) {
 			return;
 		}
 
 		timerComponents.push(
 			<>
-				<div key={interval} className='flex flex-col gap-2 items-center'>
+				<div key={`${index}-${interval}`} className='flex flex-col gap-2 items-center'>
 					<span className='text-2xl text-slate-600 font-bold'>
 						{timeLeft[interval]}
 					</span>

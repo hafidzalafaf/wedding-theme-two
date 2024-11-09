@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'SpringInMay';
+  src: url('/public/assets/font/spring-in-may.ttf');
+  font-style: normal;
+}   
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -25,12 +30,15 @@ body {
 }
 
 
-@font-face {
+/* @font-face {
   font-family: 'SpringInMay';
   src: url('/public/assets/font/spring-in-may.ttf');
   font-style: normal;
-}   
+}    */
 
+.great-vibes{
+  font-family: "Style Script", cursive;
+}
 
 .spring-font {
   font-family: 'SpringInMay', sans-serif;
@@ -57,11 +65,13 @@ font-style: normal;
 
 
 .bg-transition-top{
-  background: linear-gradient(rgba(243,239,236, 0), rgba(8, 76, 110,0.8) );
+  background: linear-gradient(rgba(243,239,236, 0), rgba(136,178,148,0.8) );
 }
 .bg-transition-top-2{
-  background: linear-gradient(rgba(243,239,236, 0), rgba(8, 76, 110,1) );
+  background: linear-gradient(rgba(243,239,236, 0), rgba(136,178,148,1) );
 }
 .bg-transition-bottom{
-  background: linear-gradient(rgba(8, 76, 110,0.8), rgba(243,239,236, 0) );
+  background: linear-gradient(rgba(136,178,148,0.8), rgba(243,239,236, 0) );
 }
+
+
