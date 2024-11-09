@@ -39,8 +39,8 @@ export default function Countdown({date}: Countdown) {
 		}
 
 		timerComponents.push(
-			<>
-				<div key={`${index}-${interval}`} className='flex flex-col gap-2 items-center'>
+			<div key={`${index}-${interval}`} className="flex items-center">
+				<div key={` ${interval}`} className='flex flex-col gap-1 items-center'>
 					<span className='text-2xl text-slate-600 font-bold'>
 						{timeLeft[interval]}
 					</span>
@@ -50,18 +50,19 @@ export default function Countdown({date}: Countdown) {
 					</span>
 				</div>
 				{interval !== 'Detik' && (
-					<div className='flex items-start'>
+					<div className='flex items-start px-2'>
 						<span className='text-2xl text-slate-600 font-bold'>
 							:
 						</span>
 					</div>
 				)}
-			</>,
+			</div>
+				
 		);
 	});
 	return (
 		<div className='px-3 sm:px-4 bg-white rounded-xl bg-opacity-100'>
-            <div className='flex gap-3 px-6 py-3 justify-center '>
+            <div className='flex gap-0 px-6 py-3 justify-center '>
                 {timerComponents.length ? timerComponents : <span>Waktu habis!</span>}
             </div>
         </div>

@@ -161,33 +161,34 @@ useEffect(() => {
     <AnimatePresence>
     {
       state === 1 && (
-      <motion.section variants={FadeOut} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} style={{backgroundImage:'url(/assets/images/bg-2.webp)'}} className='w-full h-screen bg-[#f1f2ed]  overflow-y-hidden overflow-x-hidden'>
-        <div className="py-10 flex justify-center items-center h-full relative">
-            
-          <div className="flex flex-col gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-10 relative z-10">
-            <motion.div variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} className="h-60 md:h-60 lg:h-80 xl:h-80  mx-auto ">
-              <img src="/assets/images/gunungan.webp" className='w-full h-full xl:h-72 object-cover' alt="couple image" />
-            </motion.div>
-            <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5 , delay: 0.3}} className='inter-font text-center font-semibold text-[#465e46] text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl ' >The Wedding Of</motion.p>
-            <motion.h1 variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5, delay:0.8 }} className='great-vibes  font-bold text-center text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-[#b58a34]'>Afifah & Haidar</motion.h1>
-            <div className="flex flex-col gap-2 md:gap-3">
-              <motion.div variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.1 }} className='inter-font text-center font-semibold text-[#465e46] text-md md:text-md lg:text-lg' id="guest-name">Kepada Yth Bapak/Ibu/Saudara/i</motion.div>
-              <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.4 }} className='text-center font-medium text-[#465e46] text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl great-vibes' >{nameInvite}</motion.p>
-            </div>
-            <div className=" flex justify-center">
-              <motion.button onClick={()=> {
-                playMusic()
-                setState(2)
-                }} variants={FadeIn2} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5, delay:1.7 }} className='px-6 py-3 rounded-3xl bg-[#b58a34] text-white shadow-2xl shadow-slate-800 xl:text-xl 2xl:text-xl'><i className="fa-solid fa-book-open mr-2 text-white"></i>Buka Undangan</motion.button>
-            </div>
-          </div>
-          
-
-          {BottomRightFlowers()}
-          {BottomLeftFlowers()}
-          {TopFlowers()}
- 
-        </div>
+      <motion.section variants={FadeOut} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} style={{backgroundImage:'url(/assets/images/couple-1.jpeg)'}} className='w-full h-screen bg-cover bg-no-repeat bg-center bg-[#f1f2ed]  overflow-y-hidden overflow-x-hidden'>
+                <div className="bg-[#86AF91] bg-opacity-50 h-screen w-full flex justify-center items-center">
+                  <div className="py-10 flex justify-center items-center h-full relative">
+                  
+                  <div className="flex flex-col gap-5 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-10 relative z-10">
+                  
+                    <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5 , delay: 0.3}} className='inter-font text-center font-semibold text-slate-200 text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl ' >The Wedding Of</motion.p>
+                    <motion.h1 variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5, delay:0.8 }} className='great-vibes  font-bold text-center text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-white'>Afifah & Haidar</motion.h1>
+                    <div className="flex flex-col gap-2 md:gap-3">
+                      <motion.div variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.1 }} className='inter-font text-center font-semibold text-slate-200 text-md md:text-md lg:text-lg' id="guest-name">Kepada Yth Bapak/Ibu/Saudara/i</motion.div>
+                      <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.4 }} className='text-center font-medium text-slate-200 text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl great-vibes' >{nameInvite}</motion.p>
+                    </div>
+                    <div className=" flex justify-center mt-10">
+                      <motion.button onClick={()=> {
+                        playMusic()
+                        setState(2)
+                        }} variants={FadeIn2} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5, delay:1.7 }} className='px-6 py-3 rounded-3xl bg-[#b58a34] text-white shadow-2xl shadow-slate-800 xl:text-xl 2xl:text-xl'><i className="fa-solid fa-book-open mr-2 text-white"></i>Buka Undangan</motion.button>
+                    </div>
+                  </div>
+                  
+        
+                  {/* {BottomRightFlowers()} */}
+                  {/* {BottomLeftFlowers()} */}
+                  {/* {TopFlowers()} */}
+        
+                  </div>
+                </div>
+        
       </motion.section>
       )
     }
@@ -195,7 +196,7 @@ useEffect(() => {
       state === 2 && (
         <motion.div variants={FadeIn3} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} className="relative h-screen overflow-hidden">
           <div className="flex">
-            <section style={{background: 'url(/assets/images/couple-1.webp)'}} className=' h-screen hidden md:block w-full !bg-cover !bg-no-repeat !bg-center'>
+            <section style={{background: 'url(/assets/images/couple-1.jpeg)'}} className=' h-screen hidden md:block w-full !bg-cover !bg-no-repeat !bg-center'>
               <div className="bg-[#86AF91] bg-opacity-80 h-screen w-full flex justify-center items-center">
                 <div className="flex flex-col gap-9">
                   <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 1 , delay: 0.2}} className='inter-font text-center font-semibold text-[#465e46] text-lg md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl ' >The Wedding Of</motion.p>
@@ -208,6 +209,8 @@ useEffect(() => {
               </div>
             </section>
             <aside className='max-w-full md:max-w-[480px] w-full bg-white h-screen overflow-y-auto overflow-x-hidden relative'>
+
+
               {/* SECTION SALAM */}
               <section style={{
                 background: 'url(/assets/images/bg-3.png)'
@@ -219,7 +222,9 @@ useEffect(() => {
                           whileInView={animationConfig.whileInView}
                           exit={animationConfig.exit}
                           transition={{ duration: 0.5, delay: 0.3 }} className='inter-font text-center font-semibold text-[#465e46] text-md md:text-lg capitalize mb-10 px-10'>Mengundang anda ke pesta perninkahan kami</motion.h6>
-                <div className="bg-slate-50 rounded-full h-96 mx-8  border-8 border-[#86AF91] shadow-xl flex justify-center items-center">
+                <div style={{
+                background: 'url(/assets/images/bg-2.webp)'
+              }} className="bg-slate-50 rounded-full h-96 mx-8 bg-cover bg-center border-8 border-[#86AF91] shadow-xl flex justify-center items-center">
                   <div className="px-6 flex flex-col gap-4 justify-center items-center" >
                     <div className="">
                       <motion.h6 initial={animationConfig.initial}
@@ -256,7 +261,7 @@ useEffect(() => {
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }}  className="w-52 h-72 md:h-60 md:w-48 lg:h-80 lg:w-60 xl:h-80 xl:w-60 2xl:h-96 2xl:w-72 rounded-3xl overflow-hidden mx-auto border-4 border-slate-300">
-                      <img src="/assets/images/couple-1.webp" className=' w-full h-full object-cover' alt="couple image" />
+                      <img src="/assets/images/women.jpeg" className=' w-full h-full object-cover' alt="couple image" />
                     </motion.div>
                     <motion.h6 initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
@@ -271,7 +276,7 @@ Bapak Tuhri dan Ibu Purliatun</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 1.3 }}className="flex justify-center">
-                    <a href="https://www.instagram.com/hafidz00/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @afifahdantt</a>
+                    <a href="https://www.instagram.com/afifahdantt/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @afifahdantt</a>
                     </motion.div> 
                   </div>
                   <motion.h6 initial={animationConfig.initial}
@@ -286,7 +291,7 @@ Bapak Tuhri dan Ibu Purliatun</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.8 }}className="w-52 h-72 md:h-60 md:w-48 lg:h-80 lg:w-60 xl:h-80 xl:w-60 2xl:h-96 2xl:w-72 rounded-3xl overflow-hidden mx-auto border-4 border-slate-300">
-                      <img src="/assets/images/couple-1.webp" className=' w-full h-full object-cover' alt="couple image" />
+                      <img src="/assets/images/men.jpeg" className=' w-full h-full object-cover' alt="couple image" />
                     </motion.div>
                     <motion.h6 initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
@@ -301,7 +306,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 1.5 }} className="flex justify-center">
-                    <a href="https://www.instagram.com/anindhias_raradhita/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @jrseccond</a>
+                    <a href="https://www.instagram.com/jrseccond.id/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @jrseccond.id</a>
                     </motion.div>
                   </div>
                 </div>  
@@ -348,7 +353,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }}  className='text-center great-vibes text-[#b58a34] mt-3 font-medium text-4xl'>Akad</motion.h6>
-                    <div  className="flex flex-col gap-1 ">
+                    <div  className="flex flex-col gap-3 ">
                       <motion.p initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
@@ -393,7 +398,7 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }}  className='text-center great-vibes text-[#b58a34]  font-medium text-4xl mt-2'>Resepsi</motion.h6>
                     </div>
-                    <div  className="flex flex-col gap-1 ">
+                    <div  className="flex flex-col gap-3 ">
                       <motion.p initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
@@ -448,35 +453,10 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }} className=" w-full h-full overflow-hidden mx-auto bg-[#86AF91]">
                           <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
+                            small={'/assets/images/couple-1-sm.jpeg'}
+                            large={'/assets/images/couple-1.jpeg'}
                             alt="Hello World!"
-                          />
-                          <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
-                            alt="Hello World!"
-                          />
-                          <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
-                            alt="Hello World!"
-                          />
-                          <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
-                            alt="Hello World!"
-                          />
-                          <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
-                            alt="Hello World!"
-                          />
-                          <ModalImage
-                            small={'/assets/images/couple-1-sm.webp'}
-                            large={'/assets/images/couple-1.webp'}
-                            alt="Hello World!"
-                          />
+                          /> 
                 </motion.div>
               </section>
 
@@ -677,7 +657,7 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
 
               {/* SECTION  TERIMAKASIH */}
               <section style={{
-                background: 'url(/assets/images/couple-1.webp)'
+                background: 'url(/assets/images/couple-1.jpeg)'
               }} className=' w-full !bg-cover !bg-no-repeat !bg-bottom bg-[#b58a34] relative pb-20 pt-80  flex flex-col justify-end overflow-hidden '>
                 <div className="absolute bottom-0 left-0 right-0 h-full bg-transition-top-2"></div>
                 <div className="flex flex-col gap-7 px-10 relative">
@@ -697,7 +677,7 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                     <motion.p initial={animationConfig.initial}
                           whileInView={animationConfig.whileInView}
                           exit={animationConfig.exit}
-                          transition={{ duration: 0.5, delay: 0.3 }} className=' text-sm leading-5 font-normal quicksand-font text-white text-center'>Made with <i className="fa-solid fa-heart"></i> by Hafidz Al Afaf</motion.p>
+                          transition={{ duration: 0.5, delay: 0.3 }} className=' text-sm leading-5 font-normal quicksand-font text-white text-center'>Made by Hafidz Al Afaf</motion.p>
                     <motion.p initial={animationConfig.initial}
                           whileInView={animationConfig.whileInView}
                           exit={animationConfig.exit}
@@ -726,43 +706,7 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                   )}
                 </button>
               </div>
-              {/* <div className="fixed bottom-0 max-w-[480px] w-full right-0 z-50 flex bg-[#b58a34] justify-between py-2 px-4">
-                <button
-                  onClick={toggleMusic}
-                  className="h-14 w-14 flex justify-center items-center   rounded-lg   flex-col"
-                >
-                  <i className="fa-solid fa-heart text-white"></i>
-                  <span className='text-[10px] text-white'>Mempelai</span>
-                </button>
-                <button
-                  onClick={toggleMusic}
-                  className="h-14 w-14 flex justify-center items-center  text-white rounded-lg flex-col  placeholder:"
-                >
-                  <i className="fa-solid fa-calendar-check text-slate-400"></i>
-                  <span className='text-[10px] text-slate-400'>Acara</span>
-                </button>
-                <button
-                  onClick={toggleMusic}
-                  className="h-14 w-14 flex justify-center items-center  text-white rounded-lg flex-col "
-                >
-                 <i className="fa-solid fa-map-location-dot text-slate-400"></i>
-                  <span className='text-[10px] text-slate-400'>Map</span>
-                </button>
-                <button
-                  onClick={toggleMusic}
-                  className="h-14 w-14 flex justify-center items-center  text-white rounded-lg flex-col "
-                >
-                  <i className="fa-regular fa-images text-slate-400"></i>
-                  <span className='text-[10px] text-slate-400'>Galeri</span>
-                </button>
-                <button
-                  onClick={toggleMusic}
-                  className="h-14 w-14 flex justify-center items-center  text-white rounded-lg flex-col "
-                >
-                  <i className="fa-solid fa-gift text-slate-400"></i>
-                  <span className='text-[10px] text-slate-400'>Ucapan</span>
-                </button>
-              </div> */}
+               
             </aside>
           </div>
         </motion.div>
