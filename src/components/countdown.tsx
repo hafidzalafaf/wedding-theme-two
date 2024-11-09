@@ -7,7 +7,7 @@ interface Countdown {
 export default function Countdown({date}: Countdown) {
 	const calculateTimeLeft = () => {
 		const difference = +new Date(date) - +new Date();
-		let timeLeft: any = {};
+		let timeLeft: { [key: string]: number } = {};
 
 		if (difference > 0) {
 			timeLeft = {
