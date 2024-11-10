@@ -140,7 +140,7 @@ useEffect(() => {
     <AnimatePresence>
     {
       state === 1 && (
-      <motion.section variants={FadeOut} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} style={{backgroundImage:'url(/assets/images/couple-1.jpeg)'}} className='w-full h-screen bg-cover bg-no-repeat bg-center bg-[#f1f2ed]  overflow-y-hidden overflow-x-hidden'>
+      <motion.section variants={FadeOut} initial="hidden" animate="visible" exit="exit" transition={{ duration: 2 }} style={{backgroundImage:'url(/assets/images/opening.jpeg)'}} className='w-full h-screen bg-cover bg-no-repeat bg-center bg-[#f1f2ed]  overflow-y-hidden overflow-x-hidden'>
                 <div className="bg-[#86AF91] bg-opacity-50 h-screen w-full flex justify-center items-center">
                   <div className="py-10 flex justify-center items-center h-full relative">
                   
@@ -150,9 +150,10 @@ useEffect(() => {
                     <motion.h1 variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5, delay:0.8 }} className='great-vibes  font-bold text-center text-4xl md:text-6xl lg:text-6xl xl:text-7xl text-white'>Afifah & Haidar</motion.h1>
                     <div className="flex flex-col gap-2 md:gap-3">
                       <motion.div variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.1 }} className='inter-font text-center font-semibold text-slate-200 text-md md:text-md lg:text-lg' id="guest-name">Kepada Yth Bapak/Ibu/Saudara/i</motion.div>
-                      <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.4 }} className='text-center font-medium text-slate-200 text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl great-vibes' >{nameInvite}</motion.p>
+                      <motion.p variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.4 }} className='text-center font-bold text-slate-200 text-xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl great-vibes' >{nameInvite}</motion.p>
+                      <motion.div variants={FadeIn} initial="hidden" animate="visible" exit="exit" transition={{ duration: 0.5,delay:1.1 }} className='inter-font mt-5 text-center font-semibold text-slate-200 text-xs md:text-xs lg:text-md px-10'  >Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</motion.div>
                     </div>
-                    <div className=" flex justify-center mt-10">
+                    <div className=" flex justify-center mt-5">
                       <motion.button onClick={()=> {
                         playMusic()
                         setState(2)
@@ -197,10 +198,10 @@ useEffect(() => {
                           {FlowersFallLeft()}
                           {FlowerdFallRight()}
                     <div className="">
-                    <motion.h6 initial={animationConfig.initial}
+                    {/* <motion.h6 initial={animationConfig.initial}
                           whileInView={animationConfig.whileInView}
                           exit={animationConfig.exit}
-                          transition={{ duration: 0.5, delay: 0.3 }} className='inter-font text-center font-semibold text-[#465e46] text-md md:text-lg capitalize mb-10 px-10'>Mengundang anda ke pesta perninkahan kami</motion.h6>
+                          transition={{ duration: 0.5, delay: 0.3 }} className='inter-font text-center font-semibold text-[#465e46] text-md md:text-lg capitalize mb-10 px-10'>Mengundang anda ke pesta perninkahan kami</motion.h6> */}
                 <div style={{
                 background: 'url(/assets/images/bg-2.webp)'
               }} className="bg-slate-50 rounded-full h-96 mx-8 bg-cover bg-center border-8 border-[#86AF91] shadow-xl flex justify-center items-center">
@@ -255,7 +256,7 @@ Bapak Tuhri dan Ibu Purliatun</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 1.3 }}className="flex justify-center">
-                    <a href="https://www.instagram.com/afifahdantt/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @afifahdantt</a>
+                    <a href="https://www.instagram.com/dantttt___/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @dantttt___</a>
                     </motion.div> 
                   </div>
                   <motion.h6 initial={animationConfig.initial}
@@ -285,7 +286,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 1.5 }} className="flex justify-center">
-                    <a href="https://www.instagram.com/jrseccond.id/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @jrseccond.id</a>
+                    <a href="https://www.instagram.com/xyzytpov_/" target='_blank' className='text-[#b58a34] text-center bg-white rounded-xl px-3 py-1 text-sm border border-[#b58a34]'><i className="text-md fa-brands fa-square-instagram"></i> @xyzytpov_</a>
                     </motion.div>
                   </div>
                 </div>  
@@ -434,7 +435,42 @@ Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
                           <ModalImage
                             small={'/assets/images/couple-1-sm.jpeg'}
                             large={'/assets/images/couple-1.jpeg'}
-                            alt="Hello World!"
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-2-sm.jpeg'}
+                            large={'/assets/images/couple-2.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-3-sm.jpeg'}
+                            large={'/assets/images/couple-3.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-4-sm.jpeg'}
+                            large={'/assets/images/couple-4.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-5-sm.jpeg'}
+                            large={'/assets/images/couple-5.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-6-sm.jpeg'}
+                            large={'/assets/images/couple-6.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-7-sm.jpeg'}
+                            large={'/assets/images/couple-7.jpeg'}
+                            alt=""
+                          /> 
+                          <ModalImage
+                            small={'/assets/images/couple-8-sm.jpeg'}
+                            large={'/assets/images/couple-8.jpeg'}
+                            alt=""
                           /> 
                 </motion.div>
               </section>
