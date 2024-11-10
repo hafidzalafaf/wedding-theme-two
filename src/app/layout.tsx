@@ -3,7 +3,12 @@ import "./globals.css";
  
 export const metadata: Metadata = {
   title: "WEDDING AFIFAH DAN HAIDAR",
-  description: "",
+  description: "Undangan pernikahan digital untuk pernikahan Afifah & Haidar pada tanggal 23 November 2024. Temukan informasi lengkap tentang lokasi, waktu acara. Hadirkan kebahagiaan dengan berbagi momen spesial ini bersama kami!",
+  icons: {
+    icon: "/favicon.jpeg",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.jpeg" />
       </head>
       <body
         className={` antialiased`}
