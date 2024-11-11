@@ -359,7 +359,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }}  className='text-sm leading-6 font-normal quicksand-font text-[#465e46] text-center'> Lokasi : Masjid Sabiluttaqwa
-Dk. Krajan ds. Karangtengah 02/05 kec. Subah kab. Batang</motion.p>
+Dk. Krajan ds. Karangtengah kec. Subah kab. Batang</motion.p>
                       <div className="  py-4 px-4 w-full ">
                         <motion.div initial={animationConfig.initial}
                               whileInView={animationConfig.whileInView}
