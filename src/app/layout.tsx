@@ -19,6 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="description" content="💍💖 Undangan pernikahan kami! Jangan lupa untuk hadir dan merayakannya bersama kami! 🎉" />
+        <meta property="og:title" content="Undangan Pernikahan Afifah & Haidar" />
+        <meta property="og:description" content="💍💖 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨" />
+        
+        {/* Meta tag gambar */}
+        <meta property="og:image" content="/favicon.jpeg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.jpeg" />
       </head>
       <body
