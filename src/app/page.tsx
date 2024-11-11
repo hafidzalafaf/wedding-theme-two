@@ -13,7 +13,7 @@ import ModalImage from "react-modal-image";
 
 export default function Home() {
   const [state, setState] = useState(1)
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [showGift, setShowGift] = useState(false);
   const [showKado, setShowKado] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -365,13 +365,13 @@ Dk. Krajan ds. Karangtengah kec. Subah kab. Batang</motion.p>
                               whileInView={animationConfig.whileInView}
                               exit={animationConfig.exit}
                               transition={{ duration: 0.5, delay: 0.3 }} className="">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d297.39991612335746!2d109.89978745479023!3d-7.001080615427489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1731127691478!5m2!1sid!2sid" className='w-full h-60 rounded-lg' loading="lazy"  ></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1314.9129192598493!2d109.89984643288064!3d-7.0023572188732714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7015c2d3f83505%3A0x48d85a340e00436c!2sMasjid%20Sabiluttaqwa%20Karangtengah!5e1!3m2!1sid!2sid!4v1731336831502!5m2!1sid!2sid" className='w-full h-60 rounded-lg' loading="lazy"  ></iframe>
                         </motion.div>
                         <div className="flex justify-center mt-6">
                           <motion.a initial={animationConfig.initial}
                               whileInView={animationConfig.whileInView}
                               exit={animationConfig.exit}
-                              transition={{ duration: 0.5, delay: 0.3 }}  href='https://maps.app.goo.gl/sD3JT3DVtfbz2rAK9' target='_blank' className='px-5 py-2 rounded-3xl bg-white text-[#b58a34] shadow-2xl shadow-slate-800 font-semibold text-md'><i className="fa-solid fa-map-location"></i> Lihat Maps</motion.a>
+                              transition={{ duration: 0.5, delay: 0.3 }}  href='https://maps.app.goo.gl/fE1Rsbmf6JfuVyMR7' target='_blank' className='px-5 py-2 rounded-3xl bg-white text-[#b58a34] shadow-2xl shadow-slate-800 font-semibold text-md'><i className="fa-solid fa-map-location"></i> Lihat Maps</motion.a>
                         </div>
                       </ div>
                       <motion.div initial={animationConfig.initial}
