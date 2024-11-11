@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta property="og:description" content="💍💖 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨" />
         
         {/* Meta tag gambar */}
-        <meta property="og:image" content="/favicon.jpeg" />
+        <meta property="og:image" content="https://wedding-afifah-haidar.netlify.app/favicon.jpeg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
