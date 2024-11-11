@@ -115,8 +115,8 @@ useEffect(() => {
 
   const handleSaveTheDate = () => {
     const date = new Date('2024-11-23T08:00:00'); // Ganti dengan tanggal acara
-    const title = 'Undangan Pernikahan Afifah & Haidar';
-    const description = 'Jangan lupa untuk hadir di acara kami! Terima Kasih';
+    const title = '💍💖 Undangan Pernikahan Afifah & Haidar (chimol)';
+    const description = '🎉 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨';
     
     // Menampilkan alert
     alert(`Tanggal disimpan: ${date.toLocaleString()}\nJudul: ${title}\nDeskripsi: ${description}`);
@@ -124,8 +124,12 @@ useEffect(() => {
     // Menambahkan event ke kalender
     const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
     
-    typeof window !== 'undefined'
-    ? window.open(calendarUrl, '_blank') : null
+    // Menggunakan setTimeout untuk menghindari pemblokiran pop-up di iPhone
+    setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        window.open(calendarUrl, '_blank');
+      }
+    }, 500); // Tambahkan penundaan 500ms
   };
 
   const formatDateForCalendar = (date: Date) => {
@@ -246,7 +250,7 @@ useEffect(() => {
                     <motion.h6 initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
-                        transition={{ duration: 0.5, delay: 0.8 }} className='text-center great-vibes text-[#b58a34] font-medium text-3xl'>Afifah Dina Ayu Ningtyas, S.Mat</motion.h6>
+                        transition={{ duration: 0.5, delay: 0.8 }} className='text-center great-vibes text-[#b58a34] font-medium text-3xl px-4'>Afifah Dina Ayu Ningtyas, S.Mat</motion.h6>
                     <motion.p initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
@@ -276,7 +280,7 @@ Bapak Tuhri dan Ibu Purliatun</motion.p>
                     <motion.h6 initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
-                        transition={{ duration: 0.5, delay: 1 }} className='text-center great-vibes text-[#b58a34] font-medium text-3xl'>Khaedar Lafid Daeni, S.Pd</motion.h6>
+                        transition={{ duration: 0.5, delay: 1 }} className='text-center great-vibes text-[#b58a34] font-medium text-3xl px-4'>Khaedar Lafid Daeni, S.Pd</motion.h6>
                     <motion.p initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
@@ -346,7 +350,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
                         transition={{ duration: 0.5, delay: 0.3 }}  className='text-sm leading-6 font-normal quicksand-font text-[#465e46] text-center'> Lokasi : Kediaman mempelai wanita
-Dk. Krajan ds. Karangtengah 02/05 kec. Subah</motion.p>
+Dk. Krajan ds. Karangtengah 02/05 kec. Subah kab. Batang</motion.p>
                       <div className="  py-4 px-4 w-full ">
                         <motion.div initial={animationConfig.initial}
                               whileInView={animationConfig.whileInView}
