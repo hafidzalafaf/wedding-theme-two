@@ -115,8 +115,8 @@ useEffect(() => {
 
   const handleSaveTheDate = () => {
     const date = new Date('2024-11-23T08:00:00'); // Ganti dengan tanggal acara
-    const title = ' Undangan Pernikahan Afifah & Haidar (chimol) 💍💖';
-    const description = '🎉 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨';
+    const title = ' Undangan Pernikahan Afifah & Haidar (chimol) 💍';
+    const description = 'Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏';
     
     // Menampilkan alert
     alert(`Tanggal disimpan: ${date.toLocaleString()}\nJudul: ${title}\nDeskripsi: ${description}`);
@@ -358,7 +358,7 @@ Bapak Agus Machfud dan Ibu Danusri</motion.p>
                       <motion.p initial={animationConfig.initial}
                         whileInView={animationConfig.whileInView}
                         exit={animationConfig.exit}
-                        transition={{ duration: 0.5, delay: 0.3 }}  className='text-sm leading-6 font-normal quicksand-font text-[#465e46] text-center'> Lokasi : Kediaman mempelai wanita
+                        transition={{ duration: 0.5, delay: 0.3 }}  className='text-sm leading-6 font-normal quicksand-font text-[#465e46] text-center'> Lokasi : Masjid Sabiluttaqwa
 Dk. Krajan ds. Karangtengah 02/05 kec. Subah kab. Batang</motion.p>
                       <div className="  py-4 px-4 w-full ">
                         <motion.div initial={animationConfig.initial}

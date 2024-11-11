@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="description" content="💍💖 Undangan pernikahan kami! Jangan lupa untuk hadir dan merayakannya bersama kami! 🎉" />
+        <meta name="description" content=" Undangan pernikahan kami! Jangan lupa untuk hadir dan merayakannya bersama kami! " />
         <meta property="og:title" content="Undangan Pernikahan Afifah & Haidar" />
-        <meta property="og:description" content="💍💖 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨" />
+        <meta property="og:description" content="  Jangan lupa untuk hadir di acara kami! Terima Kasih " />
         
         {/* Meta tag gambar */}
         <meta property="og:image" content="https://wedding-afifah-haidar.netlify.app/favicon.jpeg" />
