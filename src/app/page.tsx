@@ -115,21 +115,30 @@ useEffect(() => {
 
   const handleSaveTheDate = () => {
     const date = new Date('2024-11-23T08:00:00'); // Ganti dengan tanggal acara
-    const title = '💍💖 Undangan Pernikahan Afifah & Haidar (chimol)';
+    const title = ' Undangan Pernikahan Afifah & Haidar (chimol) 💍💖';
     const description = '🎉 Jangan lupa untuk hadir di acara kami! Terima Kasih 🙏✨';
     
     // Menampilkan alert
     alert(`Tanggal disimpan: ${date.toLocaleString()}\nJudul: ${title}\nDeskripsi: ${description}`);
+    const isIphone = /iPhone/i.test(navigator.userAgent);
 
-    // Menambahkan event ke kalender
-    const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
-    
-    // Menggunakan setTimeout untuk menghindari pemblokiran pop-up di iPhone
-    setTimeout(() => {
-      if (typeof window !== 'undefined') {
-        window.open(calendarUrl, '_blank');
-      }
-    }, 500); // Tambahkan penundaan 500ms
+    if (isIphone) {
+      alert("Silakan buka link di Google Chrome untuk pengalaman yang lebih baik.");
+      const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
+      setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          window.open(calendarUrl, '_blank');
+        }
+      }, 500);
+    } else {
+      const calendarUrl = `https://calendar.google.com/calendar/r/eventedit?text=${encodeURIComponent(title)}&dates=${formatDateForCalendar(date)}&details=${encodeURIComponent(description)}`;
+      setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          window.open(calendarUrl, '_blank');
+        }
+      }, 500);
+    }
+     
   };
 
   const formatDateForCalendar = (date: Date) => {
