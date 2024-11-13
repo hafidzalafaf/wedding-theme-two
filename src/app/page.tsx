@@ -10,6 +10,23 @@ import FlowersRight from '../components/flowers-right';
 import Countdown from '../components/countdown';
 import CopyToClipboard from '../components/copyToClipboard';
 import ModalImage from "react-modal-image";
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc, onSnapshot, orderBy, query, serverTimestamp } from 'firebase/firestore';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyALbQGbaNbjxV5EEFPHlNKygOM8SsPFxEo",
+  authDomain: "wedding-afifah.firebaseapp.com",
+  projectId: "wedding-afifah",
+  storageBucket: "wedding-afifah.firebasestorage.app",
+  messagingSenderId: "546783871880",
+  appId: "1:546783871880:web:d68bee5db084249ebeb03d",
+  measurementId: "G-8TD9K14FHV"
+};
+
+// Inisialisasi Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+ 
 
 export default function Home() {
   const [state, setState] = useState(1)
@@ -19,7 +36,7 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [name, setName] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [comments, setComments] = useState<{id:string, name:string, message:string}[]>([]);
+  const [comments, setComments] = useState<{  name:string, message:string}[]>([]);
   const [nameInvite, setNameInvite] = useState<string | null>(null);
 
   const playMusic = () => {
@@ -52,47 +69,49 @@ export default function Home() {
     script.type = "module";
     document.body.appendChild(script);
 }, []);
- 
-const fetchComments = async () => {
+
+// Fungsi untuk menyimpan ucapan ke Firestore
+const saveMessage = async (name: string, message: string): Promise<void> => {
+  const weddingMessage = {
+    name,
+    message,
+    timestamp: new Date,
+  };
+
   try {
-    const response = await fetch('/api/ucapan',{
-      method: 'GET'
-    });
-    const data = await response.json(); 
-    setComments(data);
-  } catch (error) {
-    console?.error('Error fetching comments:', error);
-  }
-};
-
-
-
- const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!name || !message) return;
-
-  try { 
-    const response = await fetch('/api/ucapan', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({name, message }),
-    });
-    console.log('name', response) 
-    setName('');  
+    await addDoc(collection(db, "weddingMessages"), weddingMessage);
+    console.log("Ucapan berhasil disimpan!");
+    setName('');
     setMessage('');
-    fetchComments()
   } catch (error) {
-    console.error('Error submitting comment:', error);
+    console.error("Gagal menyimpan ucapan: ", error);
   }
 };
 
+// Handle submit formulir
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (name && message) {
+    await saveMessage(name, message);
+  } else {
+    console.log("Nama dan pesan harus diisi.");
+  }
+};
+
+// Mengambil dan menampilkan ucapan dari Firestore
 useEffect(() => {
-  fetchComments();   
+  const q = query(collection(db, "weddingMessages"), orderBy("timestamp", "desc"));
+  const unsubscribe = onSnapshot(q, (snapshot) => {
+    const newMessages = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        name: doc.data().name, // Pastikan properti `name` ada di data
+        message: doc.data().message, // Pastikan properti `message` ada di data
+    }));
+    setComments(newMessages);
+  });
+
+  return () => unsubscribe();
 }, []);
-
-
 
   useEffect(() => {
     // Ambil parameter dari URL
@@ -672,11 +691,10 @@ Dk. Krajan ds. Karangtengah kec. Subah kab. Batang</motion.p>
                       </form>
 
                       <div className='overflow-auto max-h-96 mt-10'>
-                        {comments.map((comment) => (
-                          <div key={comment.id} style={{ marginTop: '20px', borderBottom: '1px solid #ccc' }}>
+                        {comments.map((comment, key) => (
+                          <div key={key} style={{ marginTop: '20px', borderBottom: '1px solid #ccc' }}>
                             <strong className='text-slate-900'>{comment.name}</strong>
                             <p className='text-slate-800'>{comment.message}</p>
-                            <small className='text-slate-800'>{new Date(comment.id).toLocaleString()}</small>
                           </div>
                         ))}
                       </div>
